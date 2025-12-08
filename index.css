@@ -1,0 +1,20 @@
+body{
+    color: darkolivegreen;
+}
+
+div#calc{
+    display: flex;
+    flex-direction: column;
+}
+
+div#keypad{
+    display: flex;
+    flex-direction: column;
+}
+
+div.row{
+    display: flex;
+    flex-direction: row;
+    color: lime;
+}
+}
