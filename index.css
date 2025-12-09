@@ -23,6 +23,8 @@ div#keypad{
     flex-direction: column;
     align-items: center;
     background-color: darkolivegreen;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
 }
 
 div.row{
