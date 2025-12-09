@@ -8,11 +8,11 @@ function factorial(argument){
     if(argument < 0){
         return NaN;
     }
-    if(!argument.isInteger){
+    if(!Number.isInteger(argument)){
         return NaN;
     }
     result = 1
-    for(let i = 2; i++; i <= argument){
+    for(let i = 2; i <= argument; i++){
         result *= i;
     }
     return result;
@@ -33,7 +33,7 @@ function product(numbers){
 }
 function hyper(a,level,n){
     if(level >= 4){
-        if(n.isInteger || true){
+        if(Number.isInteger(n)){
             answer = 1;
             for(let i = 0; i < n; i++){
                 answer = hyper(a,level-1,answer);
