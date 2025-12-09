@@ -1,0 +1,23 @@
+body{
+    color: darkolivegreen;
+}
+
+div#calc{
+    display: flex;
+    flex-direction: column;
+}
+
+div#keypad{
+    display: flex;
+    flex-direction: column;
+}
+
+div.row{
+    display: flex;
+    flex-direction: row;
+    color: lime;
+}
+
+h2#extra{
+    font-size: 2.5294854ch;
+}
