@@ -17,3 +17,7 @@ div.row{
     flex-direction: row;
     color: lime;
 }
+
+h2#extra{
+    font-size: 1.8294854ch;
+}
