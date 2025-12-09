@@ -9,7 +9,7 @@ div#calc{
 }
 
 div#output_screen{
-    height: 30%;
+    height: 30vh;
 }
 
 div#keypad{
