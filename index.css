@@ -10,6 +10,10 @@ div#calc{
 
 div#output_screen{
     height: 30vh;
+    border-style: double;
+    border-radius: 10%;
+    border-width: 2ch;
+    border-color: darkolivegreen;
 }
 
 div#keypad{
