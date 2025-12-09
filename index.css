@@ -8,6 +8,10 @@ div#calc{
     align-items: center;
 }
 
+div#output_screen{
+    height: 30%;
+}
+
 div#keypad{
     display: flex;
     flex-direction: column;
