@@ -8,10 +8,7 @@ div#calc{
     align-items: center;
     width: 52vh;
     border-style: double;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
+    border-radius: 8.2vh;
     border-width: 2ch;
     border-color: darkolivegreen;
 }
