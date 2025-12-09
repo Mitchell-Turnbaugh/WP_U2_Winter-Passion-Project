@@ -10,6 +10,7 @@ div#calc{
 
 div#output_screen{
     height: 30vh;
+    width: 100%;
     border-style: double;
     border-radius: 10%;
     border-width: 2ch;
