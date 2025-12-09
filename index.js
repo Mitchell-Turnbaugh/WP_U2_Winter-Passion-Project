@@ -18,6 +18,12 @@ function factorial(argument){
     return result;
 }
 function superFactorial(argument){
+    if(argument < 0){
+        return NaN;
+    }
+    if(!Number.isInteger(argument)){
+        return NaN;
+    }
     result = 1;
     for(let i = 2; i <= argument; i++){
         result *= factorial(i);
