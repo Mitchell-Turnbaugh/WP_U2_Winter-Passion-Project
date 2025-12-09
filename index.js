@@ -31,13 +31,14 @@ function product(numbers){
     }
     return answer;
 }
-<<<<<<< HEAD
 function hyper(a,level,n){
     if(level >= 4){
-        if(n.isInteger){
+        if(n.isInteger || true){
+            answer = 1;
             for(let i = 0; i < n; i++){
-                return hyper(a,level-1,n);
+                answer = hyper(a,level-1,answer);
             }
+            return answer;
         }else{
             return NaN;
         }
@@ -59,5 +60,3 @@ function hyper(a,level,n){
         return NaN;
     }
 }
-=======
->>>>>>> e6d3abe79b3e3dd87b8b0b4dd660ee8604493f9a
