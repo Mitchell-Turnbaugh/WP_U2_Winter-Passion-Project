@@ -1,5 +1,5 @@
 function root(degree,radicand){
-    return Math.pow(degree,1/radicand);
+    return degree ** (1/radicand);
 }
 function baseLog(base,argument){
     return Math.log(argument) / Math.log(base);
