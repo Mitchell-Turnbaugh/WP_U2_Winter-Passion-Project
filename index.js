@@ -1,5 +1,5 @@
 function root(degree,radicand){
-    return Math.pow(degree,1/radicand);
+    return degree ** (1/radicand);
 }
 function baseLog(base,argument){
     return Math.log(argument) / Math.log(base);
@@ -31,6 +31,7 @@ function product(numbers){
     }
     return answer;
 }
+<<<<<<< HEAD
 function hyper(a,level,n){
     if(level >= 4){
         if(n.isInteger){
@@ -58,3 +59,5 @@ function hyper(a,level,n){
         return NaN;
     }
 }
+=======
+>>>>>>> e6d3abe79b3e3dd87b8b0b4dd660ee8604493f9a
