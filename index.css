@@ -18,6 +18,11 @@ div.row{
     color: lime;
 }
 
+div.key{
+    width: 10vh;
+    height: 10vh;
+}
+
 h2#extra{
     font-size: 2.5294854ch;
 }
