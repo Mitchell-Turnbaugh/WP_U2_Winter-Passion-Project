@@ -6,7 +6,7 @@ div#calc{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 52vh;
+    width: 30vw;
     border-style: double;
     border-radius: 8.2vh;
     border-width: 2ch;
