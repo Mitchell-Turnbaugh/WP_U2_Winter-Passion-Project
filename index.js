@@ -30,6 +30,19 @@ function superFactorial(argument){
     }
     return result;
 }
+function hyperFactorial(argument){
+    if(argument < 0){
+        return NaN;
+    }
+    if(!Number.isInteger(argument)){
+        return NaN;
+    }
+    result = 1;
+    for(i = 2; i <= argument; i++){
+        result *= i ** i;
+    }
+    return result;
+}
 function sum(numbers){
     answer = 0;
     for(i of numbers){
