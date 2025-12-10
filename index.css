@@ -1,8 +1,12 @@
 body{
     background-color: darkseagreen;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 div#calc{
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,11 +15,12 @@ div#calc{
     border-radius: 8.2vh;
     border-width: 2ch;
     border-color: darkolivegreen;
+    align-self: center;
 }
 
 div#output_screen{
-    height: 30vh;
-    
+    min-height: 30vh;
+    color: chartreuse;
 }
 
 div#keypad{
@@ -25,14 +30,14 @@ div#keypad{
     flex-direction: column;
     align-items: center;
     background-color: darkolivegreen;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 6vh;
+    border-bottom-right-radius: 6vh;
 }
 
 div.row{
     display: flex;
     flex-direction: row;
-    color: lime;
+    color: chartreuse;
 }
 
 div.key{
@@ -40,6 +45,7 @@ div.key{
     padding-right: 4vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
+    cursor: pointer;
 }
 
 h2#extra{
