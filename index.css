@@ -45,6 +45,7 @@ div.key{
     padding-right: 4vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
+    cursor: pointer;
 }
 
 h2#extra{
