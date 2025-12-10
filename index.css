@@ -15,7 +15,7 @@ div#calc{
 }
 
 div#output_screen{
-    height: 30vh;
+    min-height: 30vh;
     
 }
 
