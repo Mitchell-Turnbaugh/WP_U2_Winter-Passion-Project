@@ -11,11 +11,29 @@ function factorial(argument){
     if(!Number.isInteger(argument)){
         return NaN;
     }
-    result = 1;
+    let result = 1;
     for(let i = 2; i <= argument; i++){
         result *= i;
     }
     return result;
+}
+function subFactorial(argument){
+    if(argument < 0){
+        return NaN;
+    }
+    if(!Number.isInteger(argument)){
+        return NaN;
+    }
+    let result = 0;
+    for(let i = 0; i <= argument; i++){
+        if(i % 2 == 0){
+            result += 1/factorial(i);
+        }else{
+            result += -1/factorial(i);
+        }
+    }
+    console.log(argument,result)
+    return factorial(argument) * result;
 }
 function superFactorial(argument){
     if(argument < 0){
@@ -38,7 +56,7 @@ function hyperFactorial(argument){
         return NaN;
     }
     result = 1;
-    for(i = 2; i <= argument; i++){
+    for(let i = 2; i <= argument; i++){
         result *= i ** i;
     }
     return result;
@@ -82,6 +100,8 @@ function hyper(a,level,n){
         return a / n;
     }else if(level === -3){
         return root(a,n);
+    }else if(!Number.isFinite(n)){
+        return Infinity;
     }else{
         return NaN;
     }
