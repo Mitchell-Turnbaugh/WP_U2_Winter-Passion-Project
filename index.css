@@ -2,6 +2,7 @@ body{
     background-color: darkseagreen;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 div#calc{
