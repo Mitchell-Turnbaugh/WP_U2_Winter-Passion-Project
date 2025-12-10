@@ -24,7 +24,6 @@ div#output_screen{
 }
 
 div#keypad{
-    max-height: 100vh;
     min-width: 100%;
     max-width: 100%;
     display: flex;
@@ -42,6 +41,7 @@ div.row{
 }
 
 div.key{
+    font-size: 3.5ch;
     padding-left: 4vh;
     padding-right: 4vh;
     padding-top: 2vh;
