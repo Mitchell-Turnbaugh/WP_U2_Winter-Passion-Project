@@ -32,7 +32,6 @@ function subFactorial(argument){
             result += -1/factorial(i);
         }
     }
-    console.log(argument,result)
     return factorial(argument) * result;
 }
 function superFactorial(argument){
