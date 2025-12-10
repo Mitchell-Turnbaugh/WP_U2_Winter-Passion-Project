@@ -1,8 +1,8 @@
 body{
     background-color: darkseagreen;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 div#calc{
@@ -15,6 +15,7 @@ div#calc{
     border-radius: 8.2vh;
     border-width: 2ch;
     border-color: darkolivegreen;
+    align-self: center;
 }
 
 div#output_screen{
