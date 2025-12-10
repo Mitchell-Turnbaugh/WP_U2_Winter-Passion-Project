@@ -108,3 +108,6 @@ function hyper(a,level,n){
         return NaN;
     }
 }
+function cot(argument){
+    return 1 / Math.tan(argument);
+}
