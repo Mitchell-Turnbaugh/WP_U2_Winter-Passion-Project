@@ -20,7 +20,7 @@ div#calc{
 
 div#output_screen{
     min-height: 30vh;
-    color: chartreuse;
+    color: lime;
 }
 
 div#keypad{
@@ -37,7 +37,7 @@ div#keypad{
 div.row{
     display: flex;
     flex-direction: row;
-    color: chartreuse;
+    color: lime;
 }
 
 div.key{
