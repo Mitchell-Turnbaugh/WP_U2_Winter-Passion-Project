@@ -83,6 +83,9 @@ function hyper(a,level,n){
             }
             return answer;
         }else{
+            if(n === Infinity){
+                return Infinity;
+            }
             return NaN;
         }
     }else if(level === 3){
@@ -99,7 +102,7 @@ function hyper(a,level,n){
         return a / n;
     }else if(level === -3){
         return root(a,n);
-    }else if(!Number.isFinite(n)){
+    }else if(n === Infinity){
         return Infinity;
     }else{
         return NaN;
