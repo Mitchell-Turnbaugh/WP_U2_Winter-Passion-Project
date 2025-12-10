@@ -41,10 +41,15 @@ div.row{
 }
 
 div.key{
-    padding-left: 4vh;
-    padding-right: 4vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    margin-top: .5vh;
+    margin-bottom: .5vh;
+
 }
 
 h2#extra{
