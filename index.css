@@ -41,8 +41,7 @@ div.row{
 }
 
 div.key{
-    max-width: 10.4vh;
-    max-height: 25vh;
+    max-height: 25%;
     font-size: medium;
     padding-left: 4vh;
     padding-right: 4vh;
