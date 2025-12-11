@@ -17,6 +17,28 @@ function factorial(argument){
     }
     return result;
 }
+function primeFactorial(argument){
+    if(argument < 0){
+        return NaN;
+    }
+    if(!Number.isInteger(argument)){
+        return NaN;
+    }
+    let primes = [];
+    outerLoop: for(let i = 2; i<=argument; i++){
+        for(let j = 2; j < i; j++){
+            if(i % j === 0){
+                continue outerLoop;
+            }
+        }
+        primes.push(i);
+    }
+    let result = 1;
+    for(i of primes){
+        result *= i;
+    }
+    return result;
+}
 function subFactorial(argument){
     if(argument < 0){
         return NaN;
