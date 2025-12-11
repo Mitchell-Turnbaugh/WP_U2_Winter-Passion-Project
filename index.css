@@ -12,7 +12,7 @@ div#calc{
     align-items: center;
     width: 52vh;
     border-style: double;
-    border-radius: 8.2vh;
+    border-radius: 50px;
     border-width: 2ch;
     border-color: #50554d;
     align-self: center;
@@ -24,15 +24,14 @@ div#output_screen{
 }
 
 div#keypad{
-    max-height: 100vh;
     min-width: 100%;
     max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #50554d;
-    border-bottom-left-radius: 6vh;
-    border-bottom-right-radius: 6vh;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 div.row{
@@ -42,13 +41,28 @@ div.row{
 }
 
 div.key{
-    padding-left: 4vh;
-    padding-right: 4vh;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    max-height: 25vh;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.8vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    border-style: solid;
+    border-color: #00ff0050;
+    height: 12vh;
     cursor: pointer;
 }
 
+div#bottom_left_corner{
+    border-bottom-left-radius: 37.5px;
+}
+
+div#bottom_right_corner{
+    border-bottom-right-radius: 37.5px;
+}
+
 h2#extra{
-    font-size: 2.5294854ch;
+    font-size: 2.3294854ch;
 }
