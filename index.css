@@ -50,6 +50,7 @@ div.key{
     padding-left: 2vh;
     padding-right: 2vh;
     border-style: solid;
+    border-color: #00ff0050;
     height: 12vh;
     cursor: pointer;
 }
