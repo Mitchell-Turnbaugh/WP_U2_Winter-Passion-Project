@@ -110,21 +110,31 @@ function hyper(a,level,n){
             }
             return NaN;
         }
-    }else if(level === 3){
-        return a ** n;
-    }else if(level === 2){
-        return a * n;
-    }else if(level === 1){
-        return a + n;
-    }else if(level === 0){
-        return a + 1;
-    }else if(level === -1){
-        return a - n;
-    }else if(level === -2){
-        return a / n;
-    }else if(level === -3){
-        return root(a,n);
-    }else if(n === Infinity){
+    }
+    switch(level){
+        case 3:
+            return a ** n;
+            break;
+        case 2:
+            return a * n;
+            break;
+        case 1:
+            return a + n;
+            break;
+        case 0:
+            return a + 1;
+            break;
+        case -1:
+            return a - n;
+            break;
+        case -2:
+            return a / n;
+            break;
+        case -3:
+            return root(a,n);
+            break;
+    }
+    if(n === Infinity){
         return Infinity;
     }else{
         return NaN;
