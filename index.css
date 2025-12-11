@@ -55,6 +55,14 @@ div.key{
     cursor: pointer;
 }
 
+div#bottom_left_corner{
+    border-bottom-left-radius: 12.5px;
+}
+
+div#bottom_right_corner{
+    border-bottom-right-radius: 12.5px;
+}
+
 h2#extra{
     font-size: 2.3294854ch;
 }
