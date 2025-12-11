@@ -12,7 +12,7 @@ div#calc{
     align-items: center;
     width: 52vh;
     border-style: double;
-    border-radius: 50px;
+    border-radius: 52px;
     border-width: 2ch;
     border-color: #50554d;
     align-self: center;
@@ -20,6 +20,10 @@ div#calc{
 
 div#output_screen{
     min-height: 30vh;
+    min-width: 52vh;
+    background-color: #738678;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
     color: lime;
 }
 
