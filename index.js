@@ -133,3 +133,6 @@ function hyper(a,level,n){
 function cot(argument){
     return 1 / Math.tan(argument);
 }
+function acot(argument){
+    return 1/Math.atan(argument);
+}
