@@ -23,15 +23,17 @@ div#output_screen{
     border-top-right-radius: 35px;
     color: lime;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 h2.output_text{
     margin: 5%;
+    word-break: break-word;
 }
 
 h2#answer{
-    align-self: self-end;
+    align-self: flex-end;
 }
 
 div#keypad{
