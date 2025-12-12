@@ -166,7 +166,11 @@ function backspace(){
 
 }
 function clear(){
-
+    const equation = document.getElementById("equation");
+    const answer = document.getElementById("answer");
+    console.log("test")
+    equation.textContent = "";
+    answer.textContent = "";
 }
 function press(pressed){
     const equation = document.getElementById("equation");
