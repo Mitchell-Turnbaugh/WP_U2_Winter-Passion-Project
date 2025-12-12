@@ -169,8 +169,9 @@ function clear(){
 
 }
 function press(pressed){
-    
+    const equation = document.getElementById("equation");
+    equation.textContent += pressed;
 }
 function solve(){
-    
+
 }
