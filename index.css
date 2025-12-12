@@ -20,3 +20,11 @@ div.key{
 h2#extra{
     font-size: 2.3294854ch;
 }
+
+a#extra:link{
+    color: lime;
+}
+
+a#extra:visisted{
+    color: lime;
+}
