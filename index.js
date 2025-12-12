@@ -159,6 +159,18 @@ function cot(argument){
 function acot(argument){
     return 1/Math.atan(argument);
 }
+function Answer(){
+
+}
+function backspace(){
+
+}
+function clear(){
+
+}
 function press(pressed){
+    
+}
+function solve(){
     
 }
