@@ -82,6 +82,19 @@ function hyperFactorial(argument){
     }
     return result;
 }
+function multiFactorial(argument,amount){
+    if(argument < 0){
+        return NaN;
+    }
+    if(!Number.isInteger(argument)){
+        return NaN;
+    }
+    result = 1;
+    for(let i = argument; i >= 2; i -= amount){
+        result *= i;
+    }
+    return result;
+}
 function sum(numbers){
     answer = 0;
     for(i of numbers){
@@ -145,4 +158,7 @@ function cot(argument){
 }
 function acot(argument){
     return 1/Math.atan(argument);
+}
+function press(pressed){
+    
 }
