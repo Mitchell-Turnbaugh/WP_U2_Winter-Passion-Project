@@ -163,7 +163,8 @@ function Answer(){
 
 }
 function backspace(){
-
+    const equation = document.getElementById("equation");
+    equation.textContent = equation.textContent.slice(0,-1);
 }
 function empty(){
     const equation = document.getElementById("equation");
