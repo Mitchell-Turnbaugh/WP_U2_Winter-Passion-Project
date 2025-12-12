@@ -20,10 +20,10 @@ a#extra{
     font-size: 2.3294854ch;
 }
 
-a#extra_link:link{
+a#extra:link{
     color: lime;
 }
 
-a#extra_link:visisted{
+a#extra:visisted{
     color: lime;
 }
