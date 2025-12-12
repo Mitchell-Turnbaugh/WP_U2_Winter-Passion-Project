@@ -1,70 +1,20 @@
-body{
-    background-color: #ACE1AF;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
+
 
 div#calc{
-    max-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 52vh;
-    border-style: double;
-    border-radius: 52px;
-    border-width: 2ch;
-    border-color: #50554d;
-    align-self: center;
 }
 
 div#output_screen{
     min-height: 30vh;
     min-width: 52vh;
-    background-color: #738678;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
-    color: lime;
 }
 
-div#keypad{
-    min-width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #50554d;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
 
-div.row{
-    display: flex;
-    flex-direction: row;
-    color: lime;
-}
 
 div.key{
     max-height: 25vh;
-    font-size: medium;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 5.8vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    border-style: solid;
-    border-color: #00ff0050;
     height: 12vh;
-    cursor: pointer;
-}
-
-div#bottom_left_corner{
-    border-bottom-left-radius: 37.5px;
-}
-
-div#bottom_right_corner{
-    border-bottom-right-radius: 37.5px;
 }
 
 h2#extra{
