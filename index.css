@@ -21,10 +21,10 @@ h2#extra{
     font-size: 2.3294854ch;
 }
 
-a#extra:link{
+a#extra_link:link{
     color: lime;
 }
 
-a#extra:visisted{
+a#extra_link:visisted{
     color: lime;
 }
