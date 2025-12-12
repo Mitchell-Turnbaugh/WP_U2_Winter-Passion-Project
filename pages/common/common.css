@@ -24,7 +24,10 @@ div#output_screen{
     color: lime;
     display: flex;
     justify-content: space-between;
-    align-items: space-between;
+}
+
+h2#answer{
+    align-self: self-end;
 }
 
 div#keypad{
