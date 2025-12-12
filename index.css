@@ -5,6 +5,7 @@ div#calc{
 div#output_screen{
     min-height: 30vh;
     min-width: 52vh;
+    max-width: 52vh;
 }
 
 
