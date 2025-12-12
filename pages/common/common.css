@@ -22,6 +22,9 @@ div#output_screen{
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     color: lime;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
 div#keypad{
