@@ -39,7 +39,6 @@ div.row{
     display: flex;
     flex-direction: row;
     color: lime;
-    font-family: impact;
 }
 
 div.key{
