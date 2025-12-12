@@ -168,7 +168,6 @@ function backspace(){
 function empty(){
     const equation = document.getElementById("equation");
     const answer = document.getElementById("answer");
-    console.log("test")
     equation.textContent = "";
     answer.textContent = "";
 }
