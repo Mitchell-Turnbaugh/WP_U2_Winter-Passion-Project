@@ -22,6 +22,7 @@ a#extra{
 
 a#extra:link{
     color: lime;
+    font-family: impact;
 }
 
 a#extra:visisted{
