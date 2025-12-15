@@ -2,14 +2,14 @@ div#output_screen{
     min-height: 30vh;
 }
 
-a.links{
+div.links{
     font-size: 2.3294854ch;
 }
 
-a.links:link{
+div.links:link{
     color: lime;
 }
 
-a.links:visited{
+div.links:visited{
     color: lime;
 }
