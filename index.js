@@ -178,9 +178,9 @@ function press(pressed){
     equation.textContent += pressed;
 }
 function solve(){
-    const equation = document.getElementById("equation");
+    let equation = document.getElementById("equation").textContent;
     const answer = document.getElementById("answer");
-    equation.textContent = equation.textContent.replaceAll("÷","/");
-    answer.textContent = eval(equation.textContent);
+    equation = equation.replaceAll("÷","/");
+    answer.textContent = eval(equation);
     sessionStorage.setItem("answer",answer.textContent);
 }
