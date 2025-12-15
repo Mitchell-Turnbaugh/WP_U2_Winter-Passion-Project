@@ -161,7 +161,7 @@ function acot(argument){
 }
 function answer(){
     const equation = document.getElementById("equation");
-    equation.textContent += Number(sessionStorage.getItem("answer"));
+    press(Number(sessionStorage.getItem("answer")));
 }
 function backspace(){
     const equation = document.getElementById("equation");
@@ -175,6 +175,10 @@ function empty(){
 }
 function press(pressed){
     const equation = document.getElementById("equation");
+    const answer = document.getElementById("answer");
+    if(answer.textContent !== ""){
+        empty();
+    }
     equation.textContent += pressed;
 }
 function solve(){
