@@ -160,7 +160,8 @@ function acot(argument){
     return 1/Math.atan(argument);
 }
 function Answer(){
-
+    const equation = document.getElementById("equation");
+    equation.textContent += Number(sessionStorage.getItem("answer"));
 }
 function backspace(){
     const equation = document.getElementById("equation");
