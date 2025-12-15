@@ -159,7 +159,7 @@ function cot(argument){
 function acot(argument){
     return 1/Math.atan(argument);
 }
-function Answer(){
+function answer(){
     const equation = document.getElementById("equation");
     equation.textContent += Number(sessionStorage.getItem("answer"));
 }
@@ -178,5 +178,9 @@ function press(pressed){
     equation.textContent += pressed;
 }
 function solve(){
-
+    const equation = document.getElementById("equation");
+    const answer = document.getElementById("answer");
+    equation.textContent = equation.textContent.replaceAll("÷","/");
+    answer.textContent = eval(equation.textContent);
+    sessionStorage.setItem("answer",answer.textContent);
 }
