@@ -161,6 +161,14 @@ function acot(argument){
 }
 function answer(){
     const equation = document.getElementById("equation");
+    console.log(equation.textContent[equation.textContent.length - 1])
+    for(i of "0123456789."){
+        console.log(typeof i)
+        if(equation.textContent[(equation.textContent.length - 1)] == i){
+            press("(" + Number(sessionStorage.getItem("answer")) + ")");
+            return;
+        }
+    }
     press(Number(sessionStorage.getItem("answer")));
 }
 function backspace(){
