@@ -16,15 +16,15 @@ div.key{
     height: 12vh;
 }
 
-a#extra{
+div#bottom_left_corner{
     font-size: 2.3294854ch;
 }
 
-a#extra:link{
+div#bottom_left_corner:link{
     color: lime;
     font-family: impact;
 }
 
-a#extra:visisted{
+div#bottom_left_corner:visisted{
     color: lime;
 }
