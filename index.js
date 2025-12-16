@@ -161,10 +161,12 @@ function acot(argument){
 }
 function answer(){
     const equation = document.getElementById("equation");
-    console.log(equation.textContent[equation.textContent.length - 1])
+    if(equation.textContent[equation.textContent.length - 1] == "."){
+        press("0(" + Number(sessionStorage.getItem("answer")) + ")")
+        return;
+    }
     for(i of "0123456789."){
-        console.log(typeof i)
-        if(equation.textContent[(equation.textContent.length - 1)] == i){
+        if(equation.textContent[equation.textContent.length - 1] == i){
             press("(" + Number(sessionStorage.getItem("answer")) + ")");
             return;
         }
