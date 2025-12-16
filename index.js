@@ -193,6 +193,10 @@ function solve(){
     let equation = document.getElementById("equation").textContent;
     const answer = document.getElementById("answer");
     equation = equation.replaceAll("÷","/");
-    answer.textContent = eval(equation);
-    sessionStorage.setItem("answer",answer.textContent);
+    try{
+        answer.textContent = eval(equation);
+        sessionStorage.setItem("answer",answer.textContent);
+    }catch{
+        answer.textContent = "Math Error";
+    }
 }
