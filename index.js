@@ -161,10 +161,12 @@ function acot(argument){
 }
 function answer(){
     const equation = document.getElementById("equation");
-    console.log(equation.textContent[equation.textContent.length - 1])
+    if(equation.textContent[equation.textContent.length - 1] == "."){
+        press("0(" + Number(sessionStorage.getItem("answer")) + ")")
+        return;
+    }
     for(i of "0123456789."){
-        console.log(typeof i)
-        if(equation.textContent[(equation.textContent.length - 1)] == i){
+        if(equation.textContent[equation.textContent.length - 1] == i){
             press("(" + Number(sessionStorage.getItem("answer")) + ")");
             return;
         }
@@ -185,6 +187,7 @@ function press(pressed){
     const equation = document.getElementById("equation");
     const answer = document.getElementById("answer");
     if(answer.textContent !== ""){
+
         empty();
     }
     equation.textContent += pressed;
@@ -193,6 +196,16 @@ function solve(){
     let equation = document.getElementById("equation").textContent;
     const answer = document.getElementById("answer");
     equation = equation.replaceAll("÷","/");
-    answer.textContent = eval(equation);
-    sessionStorage.setItem("answer",answer.textContent);
+    while(equation.includes("--")){
+        equation = equation.replaceAll("--","+");
+    }
+    while(equation.includes("++")){
+        equation = equation.replaceAll("++","+");
+    }
+    try{
+        answer.textContent = eval(equation);
+        sessionStorage.setItem("answer",answer.textContent);
+    }catch{
+        answer.textContent = "Math Error";
+    }
 }
