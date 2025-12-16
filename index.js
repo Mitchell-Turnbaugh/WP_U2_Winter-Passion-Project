@@ -187,6 +187,7 @@ function press(pressed){
     const equation = document.getElementById("equation");
     const answer = document.getElementById("answer");
     if(answer.textContent !== ""){
+
         empty();
     }
     equation.textContent += pressed;
@@ -195,6 +196,7 @@ function solve(){
     let equation = document.getElementById("equation").textContent;
     const answer = document.getElementById("answer");
     equation = equation.replaceAll("÷","/");
+    equation = equation.replaceAll("--","+");
     try{
         answer.textContent = eval(equation);
         sessionStorage.setItem("answer",answer.textContent);
