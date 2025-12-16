@@ -196,7 +196,9 @@ function solve(){
     let equation = document.getElementById("equation").textContent;
     const answer = document.getElementById("answer");
     equation = equation.replaceAll("÷","/");
-    equation = equation.replaceAll("--","+");
+    while(equation.includes("--")){
+        equation = equation.replaceAll("--","+");
+    }
     equation = equation.replaceAll("++","+");
     try{
         answer.textContent = eval(equation);
