@@ -199,7 +199,9 @@ function solve(){
     while(equation.includes("--")){
         equation = equation.replaceAll("--","+");
     }
-    equation = equation.replaceAll("++","+");
+    while(equation.includes("++")){
+        equation = equation.replaceAll("++","+");
+    }
     try{
         answer.textContent = eval(equation);
         sessionStorage.setItem("answer",answer.textContent);
