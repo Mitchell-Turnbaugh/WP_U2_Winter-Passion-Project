@@ -187,7 +187,6 @@ function press(pressed){
     const equation = document.getElementById("equation");
     const answer = document.getElementById("answer");
     if(answer.textContent !== ""){
-
         empty();
     }
     equation.textContent += pressed;
@@ -196,6 +195,11 @@ function solve(){
     let equation = document.getElementById("equation").textContent;
     const answer = document.getElementById("answer");
     equation = equation.replaceAll("÷","/");
+    parenthesis = [];
+    for(let i = 0; i < length; i++){
+        parenthesis.push(equation.indexOf("("),i);
+    }
+    
     while(equation.includes("--")){
         equation = equation.replaceAll("--","+");
     }
