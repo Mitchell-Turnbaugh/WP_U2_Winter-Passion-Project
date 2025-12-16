@@ -5,6 +5,7 @@
         <link rel = "stylesheet" href = "extra.css"> 
         <link rel = "stylesheet" href = "../common/common.css">
         <script src = "index.js"></script>
+        <script src = '../common/common.js'></script>
     </head>
     <body>
         <div id = calc>
@@ -14,35 +15,47 @@
             </div>
             <div id = keypad>
                 <div class = row>
-                    <div onclick = 'empty()' class = key><h2>AC</h2></div>
-                    <div onclick = 'press("1")'  class = key><h2>1</h2></div>
-                    <div onclick = 'press("2")'  class = key><h2>2</h2></div>
-                    <div onclick = 'press("3")'  class = key><h2>3</h2></div>
-                    <div onclick = 'press("+")'  class = key><h2>+</h2></div>
+                    <div onclick = '/*function*/' class = key><h2>% ↔ x/y</h2></div>
+                    <div onclick = '/*function*/'  class = key><h2>x/y</h2></div>
+                    <div onclick = 'press("%")'  class = key><h2>%</h2></div>
+                    <div onclick = 'press("log")'  class = key><h2>log<sub>b</sub>(x)</h2></div>
+                    <div onclick = 'press("∞")'  class = key><h2>∞</h2></div>
+                    <div onclick = 'press("10^100")' class = key><h2>10<sup>100</sup></h2></div>
                 </div>
 
                 <div class = row>
                     <div onclick = 'backspace()'  class = key><h2>DEL</h2></div>
-                    <div onclick = 'press("4")'  class = key><h2>4</h2></div>
-                    <div onclick = 'press("5")'  class = key><h2>5</h2></div>
-                    <div onclick = 'press("6")'  class = key><h2>6</h2></div>
+                    <div onclick = 'press("7")'  class = key><h2>π</h2></div>
+                    <div onclick = 'press("8")'  class = key><h2>ɸ</h2></div>
+                    <div onclick = 'press("9")'  class = key><h2><i>e</i></h2></div>
+                    <div onclick = 'press("*")'  class = key><h2><i>i</i></h2></div>
+                </div>
+
+                <div class = row>
                     <div onclick = 'press("-")'  class = key><h2>-</h2></div>
+                    <div onclick = '/*function*/'  class = key><h2>MOD</h2></div>
+                    <div onclick = 'press("(")'  class = key><h2>&lpar</h2></div>
+                    <div onclick = 'press(")")'  class = key><h2>&rpar</h2></div>
+                    <div onclick = '/*function*/'  class = key><h2>SIN</h2></div>
+                    <div onclick = '/*function*/'  class = key><h2>CSC</h2></div>
                 </div>
 
                 <div class = row>
-                    <div onclick = 'answer()'  class = key><h2>ANS</h2></div>
-                    <div onclick = 'press("7")'  class = key><h2>7</h2></div>
-                    <div onclick = 'press("8")'  class = key><h2>8</h2></div>
-                    <div onclick = 'press("9")'  class = key><h2>9</h2></div>
-                    <div onclick = 'press("*")'  class = key><h2>*</h2></div>
+                    <div class = 'key' id = bottom_left_corner><a href = '../../index.html' class = 'links' id = 'extra'><h2>Basic</h2></a></div>
+                    <div onclick = 'press("^2")'  class = key><h2>x<sup>2</sup></h2></div>
+                    <div onclick = 'press("^3")'  class = key><h2>x<sup>3</sup></h2></div>
+                    <div onclick = '/*function*/'  class = key><h2>x<sup>y</sup></h2></div>
+                    <div onclick = '/*function*/'  class = key><h2>COS</h2></div>
+                    <div onclick = '/*function*/'  class = key id = bottom_right_corner><h2>SEC</h2></div>
                 </div>
 
                 <div class = row>
-                    <div class = 'key' id = bottom_left_corner><a href = 'pages/Extra/extra.html' class = 'links' id = 'extra'><h2>Extra</h2></a></div>
-                    <div onclick = 'press(".")'  class = key><h2>.</h2></div>
-                    <div onclick = 'press("0")'  class = key><h2>0</h2></div>
-                    <div onclick = 'solve()'  class = key><h2>=</h2></div>
-                    <div onclick = 'press("÷")'  class = key id = bottom_right_corner><h2>÷</h2></div>
+                    <div class = 'key' id = bottom_left_corner><a href = '../Factorial/factorial.html' class = 'links' id = 'extra'><h2>Factorial</h2></a></div>
+                    <div onclick = '/*function*/'  class = key><h2>√x</h2></div>
+                    <div onclick = '/*function*/'  class = key><h2><sup>3</sup>√x</h2></div>
+                    <div onclick = '/*function*/'  class = key><h2><sup>y</sup>√x</h2></div>
+                    <div onclick = '/*function*/'  class = key><h2>TAN</h2></div>
+                    <div onclick = '/*function*/'  class = key id = bottom_right_corner><h2>COT</h2></div>
                 </div>
             </div>
         </div>
