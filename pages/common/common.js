@@ -1,5 +1,7 @@
-const equation = document.getElementById("equation");
-equation.textContent = sessionStorage.getItem("equation");
+function keepEquation(){
+    const equation = document.getElementById("equation");
+    equation.textContent = sessionStorage.getItem("equation");
+}
 function answer(){
     const equation = document.getElementById("equation");
     if(equation.textContent[equation.textContent.length - 1] === "."){
