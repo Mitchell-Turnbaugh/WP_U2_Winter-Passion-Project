@@ -97,14 +97,14 @@ function multiFactorial(argument,amount){
 }
 function sum(numbers){
     answer = 0;
-    for(i of numbers){
+    for(const i of numbers){
         answer += i;
     }
     return answer;
 }
 function product(numbers){
     answer = 0;
-    for(i of numbers){
+    for(const i of numbers){
         answer *= i;
     }
     return answer;
@@ -158,58 +158,4 @@ function cot(argument){
 }
 function acot(argument){
     return 1/Math.atan(argument);
-}
-function answer(){
-    const equation = document.getElementById("equation");
-    if(equation.textContent[equation.textContent.length - 1] == "."){
-        press("0(" + Number(sessionStorage.getItem("answer")) + ")")
-        return;
-    }
-    for(i of "0123456789."){
-        if(equation.textContent[equation.textContent.length - 1] == i){
-            press("(" + Number(sessionStorage.getItem("answer")) + ")");
-            return;
-        }
-    }
-    press(Number(sessionStorage.getItem("answer")));
-}
-function backspace(){
-    const equation = document.getElementById("equation");
-    equation.textContent = equation.textContent.slice(0,-1);
-}
-function empty(){
-    const equation = document.getElementById("equation");
-    const answer = document.getElementById("answer");
-    equation.textContent = "";
-    answer.textContent = "";
-}
-function press(pressed){
-    const equation = document.getElementById("equation");
-    const answer = document.getElementById("answer");
-    if(answer.textContent !== ""){
-        empty();
-    }
-    equation.textContent += pressed;
-}
-function solve(){
-    let equation = document.getElementById("equation").textContent;
-    const answer = document.getElementById("answer");
-    equation = equation.replaceAll("÷","/");
-    parenthesis = [];
-    for(let i = 0; i < length; i++){
-        parenthesis.push(equation.indexOf("("),i);
-    }
-    
-    while(equation.includes("--")){
-        equation = equation.replaceAll("--","+");
-    }
-    while(equation.includes("++")){
-        equation = equation.replaceAll("++","+");
-    }
-    try{
-        answer.textContent = eval(equation);
-        sessionStorage.setItem("answer",answer.textContent);
-    }catch{
-        answer.textContent = "Math Error";
-    }
 }
