@@ -19,12 +19,14 @@ function answer(){
 function backspace(){
     const equation = document.getElementById("equation");
     equation.textContent = equation.textContent.slice(0,-1);
+    sessionStorage.setItem("equation",equation.textContent);
 }
 function empty(){
     const equation = document.getElementById("equation");
     const answer = document.getElementById("answer");
     equation.textContent = "";
     answer.textContent = "";
+    sessionStorage.setItem("equation",equation.textContent);
 }
 function press(pressed){
     const equation = document.getElementById("equation");
@@ -62,6 +64,9 @@ function solve(){
     while(equation.includes("++")){
         equation = equation.replaceAll("++","+");
     }
+    equation = equation.replaceAll("π","Math.PI");
+    equation = equation.replaceAll("e","Math.E");
+    equation = equation.replaceAll("ɸ","1.618033988749894848204586834");
     try{
         answer.textContent = eval(equation);
         sessionStorage.setItem("answer",answer.textContent);
