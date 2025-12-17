@@ -1,3 +1,7 @@
+function keepEquation(){
+    const equation = document.getElementById("equation");
+    equation.textContent = sessionStorage.getItem("equation");
+}
 function answer(){
     const equation = document.getElementById("equation");
     if(equation.textContent[equation.textContent.length - 1] === "."){
@@ -29,6 +33,7 @@ function press(pressed){
         empty();
     }
     equation.textContent += pressed;
+    sessionStorage.setItem("equation",equation.textContent);
 }
 function solve(){
     let equation = document.getElementById("equation").textContent;
