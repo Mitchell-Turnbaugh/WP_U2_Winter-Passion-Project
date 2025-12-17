@@ -8,7 +8,7 @@ function answer(){
         press("0(" + Number(sessionStorage.getItem("answer")) + ")")
         return;
     }
-    for(const i of "0123456789."){
+    for(const i of "√0123456789."){
         if(equation.textContent[equation.textContent.length - 1] === i){
             press("(" + Number(sessionStorage.getItem("answer")) + ")");
             return;
@@ -69,6 +69,7 @@ function solve(){
     equation = equation.replaceAll("ɸ","1.618033988749894848204586834");
     equation = equation.replaceAll("^","**");
     equation = equation.replaceAll("∞","Infinity");
+    equation = equation.replaceAll("√","Math.sqrt")
     try{
         answer.textContent = String(eval(equation)).replaceAll("Infinity","∞").replaceAll("NaN","Math Error");
         sessionStorage.setItem("answer",answer.textContent);
