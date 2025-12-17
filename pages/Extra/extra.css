@@ -1,5 +1,6 @@
 div#output_screen{
     min-height: 30vh;
+    min-width: 60vh;
 }
 
 a.links:link{
