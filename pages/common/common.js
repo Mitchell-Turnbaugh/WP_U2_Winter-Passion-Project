@@ -70,7 +70,7 @@ function solve(){
     equation = equation.replaceAll("^","**");
     equation = equation.replaceAll("∞","Infinity");
     try{
-        answer.textContent = String(eval(equation)).replaceAll("Infinity","∞");
+        answer.textContent = String(eval(equation)).replaceAll("Infinity","∞").replaceAll("Math Error");
         sessionStorage.setItem("answer",answer.textContent);
     }catch{
         answer.textContent = "Math Error";
