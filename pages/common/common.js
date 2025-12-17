@@ -67,8 +67,10 @@ function solve(){
     equation = equation.replaceAll("π","Math.PI");
     equation = equation.replaceAll("e","Math.E");
     equation = equation.replaceAll("ɸ","1.618033988749894848204586834");
+    equation = equation.replaceAll("^","**");
+    equation = equation.replaceAll("∞","Infinity");
     try{
-        answer.textContent = eval(equation);
+        answer.textContent = String(eval(equation)).replaceAll("Infinity","∞");
         sessionStorage.setItem("answer",answer.textContent);
     }catch{
         answer.textContent = "Math Error";
