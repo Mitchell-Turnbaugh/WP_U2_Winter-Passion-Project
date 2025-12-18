@@ -115,6 +115,8 @@ function solve(){
     equation = equation.replaceAll("^","**");
     equation = equation.replaceAll("∞","Infinity");
     equation = equation.replaceAll("√","Math.sqrt");
+    equation = equation.replaceAll("cos","Math.cos");
+    equation = equation.replaceAll("sin","Math.sin")
     console.log(equation)
     try{
         answer.textContent = String(eval(equation)).replaceAll("Infinity","∞").replaceAll("NaN","Math Error");
