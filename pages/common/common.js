@@ -37,11 +37,42 @@ function press(pressed){
     equation.textContent += pressed;
     sessionStorage.setItem("equation",equation.textContent);
 }
+function addMultiply(equation,charater){
+    let charaters = [];
+    for(let i = equation.indexOf(charater); i !== -1; i = equation.indexOf(charater,i + 1)){
+        for(const j of "0123456789"){
+            if(equation[i - 1] == j){
+                charaters.push(i);
+                break;
+            }
+        }
+    }
+    for(const i of charaters){
+        const first = equation.slice(0,i);
+        const end = equation.slice(i);
+        equation = first + "*" + end;
+    }
+    charaters = [];
+    for(let i = equation.indexOf(charater); i !== -1; i = equation.indexOf(charater,i + 1)){
+        for(const j of "0123456789"){
+            if(equation[i + 1] == j){
+                charaters.push(i);
+                break;
+            }
+        }
+    }
+    for(const i of charaters){
+        first = equation.slice(0,i+1);
+        end = equation.slice(i+1);
+        equation = first + "*" + end;
+    }
+    return equation;
+}
 function solve(){
     let equation = document.getElementById("equation").textContent;
     const answer = document.getElementById("answer");
     equation = equation.replaceAll("÷","/");
-    parenthesis = [];
+    let parenthesis = [];
     for(let i = equation.indexOf("("); i !== -1; i = equation.indexOf("(",i + 1)){
         for(const j of "0123456789"){
             if(equation[i - 1] == j){
@@ -69,33 +100,8 @@ function solve(){
         end = equation.slice(i+1);
         equation = first + "*" + end;
     }
-    looking = []
-    for(let i = equation.indexOf("π"); i !== -1; i = equation.indexOf("π",i + 1)){
-        for(const j of "0123456789"){
-            if(equation[i - 1] == j){
-                looking.push(i);
-                break;
-            }
-        }
-    }
-    for(const i of looking){
-        first = equation.slice(0,i);
-        end = equation.slice(i);
-        equation = first + "*" + end;
-    }
-    looking = [];
-    for(let i = equation.indexOf("π"); i !== -1; i = equation.indexOf("π",i + 1)){
-        for(const j of "0123456789"){
-            if(equation[i + 1] == j){
-                looking.push(i);
-                break;
-            }
-        }
-    }
-    for(const i of looking){
-        first = equation.slice(0,i+1);
-        end = equation.slice(i+1);
-        equation = first + "*" + end;
+    for(i of "πeɸ∞"){
+        equation = addMultiply(equation,i);
     }
     while(equation.includes("--")){
         equation = equation.replaceAll("--","+");
@@ -112,6 +118,7 @@ function solve(){
     try{
         answer.textContent = String(eval(equation)).replaceAll("Infinity","∞").replaceAll("NaN","Math Error");
         sessionStorage.setItem("answer",answer.textContent);
+        console.log(equation)
     }catch{
         answer.textContent = "Math Error";
     }
