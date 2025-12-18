@@ -12,10 +12,10 @@ div.key{
     width: 8.7vh;
 }
 
-a#extra:link{
+a#link:link{
     color: lime;
 }
 
-a#extra:visited{
+a#link:visited{
     color: lime;
 }
