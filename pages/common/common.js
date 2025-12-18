@@ -42,7 +42,7 @@ function solve(){
     const answer = document.getElementById("answer");
     equation = equation.replaceAll("÷","/");
     parenthesis = [];
-    for(let i = equation.indexOf("("); i < equation.length && i !== -1; i = equation.indexOf("(",i + 1)){
+    for(let i = equation.indexOf("("); i !== -1; i = equation.indexOf("(",i + 1)){
         for(const j of "0123456789"){
             if(equation[i - 1] == j){
                 parenthesis.push(i);
@@ -54,6 +54,21 @@ function solve(){
     for(const i of parenthesis){
         first = equation.slice(0,i);
         end = equation.slice(i);
+        equation = first + "*" + end;
+    }
+    parenthesis = [];
+    for(let i = equation.indexOf(")"); i !== -1; i = equation.indexOf(")",i + 1)){
+        for(const j of "0123456789"){
+            if(equation[i + 1] == j){
+                parenthesis.push(i);
+                console.log(i);
+                break;
+            }
+        }
+    }
+    for(const i of parenthesis){
+        first = equation.slice(0,i+1);
+        end = equation.slice(i+1);
         equation = first + "*" + end;
     }
     while(equation.includes("--")){
