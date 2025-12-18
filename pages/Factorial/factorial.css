@@ -4,8 +4,9 @@ div#calc{
 
 div#output_screen{
     height: 30vh;
+    max-width: 40vh;
 }
 
 div.key{
-    width: 7.2vh;
+    width: 8.2vh;
 }
