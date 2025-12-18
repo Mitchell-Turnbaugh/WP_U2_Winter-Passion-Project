@@ -40,7 +40,7 @@ function press(pressed){
 function addMultiply(equation,charater){
     let charaters = [];
     for(let i = equation.indexOf(charater); i !== -1; i = equation.indexOf(charater,i + 1)){
-        for(const j of "0123456789"){
+        for(const j of "0123456789πeɸ∞"){
             if(equation[i - 1] == j){
                 charaters.push(i);
                 break;
@@ -54,7 +54,7 @@ function addMultiply(equation,charater){
     }
     charaters = [];
     for(let i = equation.indexOf(charater); i !== -1; i = equation.indexOf(charater,i + 1)){
-        for(const j of "0123456789"){
+        for(const j of "0123456789πeɸ∞"){
             if(equation[i + 1] == j){
                 charaters.push(i);
                 break;
@@ -115,6 +115,7 @@ function solve(){
     equation = equation.replaceAll("^","**");
     equation = equation.replaceAll("∞","Infinity");
     equation = equation.replaceAll("√","Math.sqrt");
+    console.log(equation)
     try{
         answer.textContent = String(eval(equation)).replaceAll("Infinity","∞").replaceAll("NaN","Math Error");
         sessionStorage.setItem("answer",answer.textContent);
