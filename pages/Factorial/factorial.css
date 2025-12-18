@@ -1,7 +1,11 @@
 div#calc{
-    width: 49vh;
+    width: 40vh;
 }
 
 div#output_screen{
     height: 30vh;
+}
+
+div.key{
+    width: 7.2vh;
 }

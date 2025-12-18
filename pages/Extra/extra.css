@@ -22,3 +22,7 @@ h2.longer{
 h2.longest{
     font-size: 1.8ch;
 }
+
+div.key{
+    width: 5.8vh;
+}
