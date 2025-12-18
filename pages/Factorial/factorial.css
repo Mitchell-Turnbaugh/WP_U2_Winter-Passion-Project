@@ -11,3 +11,11 @@ div#output_screen{
 div.key{
     width: 8.7vh;
 }
+
+a#extra:link{
+    color: lime;
+}
+
+a#extra:visited{
+    color: lime;
+}
