@@ -83,6 +83,20 @@ function solve(){
         end = equation.slice(i);
         equation = first + "*" + end;
     }
+    looking = [];
+    for(let i = equation.indexOf("π"); i !== -1; i = equation.indexOf("π",i + 1)){
+        for(const j of "0123456789"){
+            if(equation[i + 1] == j){
+                looking.push(i);
+                break;
+            }
+        }
+    }
+    for(const i of looking){
+        first = equation.slice(0,i+1);
+        end = equation.slice(i+1);
+        equation = first + "*" + end;
+    }
     while(equation.includes("--")){
         equation = equation.replaceAll("--","+");
     }
@@ -94,7 +108,7 @@ function solve(){
     equation = equation.replaceAll("ɸ","1.618033988749894848204586834");
     equation = equation.replaceAll("^","**");
     equation = equation.replaceAll("∞","Infinity");
-    equation = equation.replaceAll("√","Math.sqrt")
+    equation = equation.replaceAll("√","Math.sqrt");
     try{
         answer.textContent = String(eval(equation)).replaceAll("Infinity","∞").replaceAll("NaN","Math Error");
         sessionStorage.setItem("answer",answer.textContent);
