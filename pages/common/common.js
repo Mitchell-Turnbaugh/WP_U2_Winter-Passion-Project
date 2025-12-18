@@ -69,6 +69,20 @@ function solve(){
         end = equation.slice(i+1);
         equation = first + "*" + end;
     }
+    looking = []
+    for(let i = equation.indexOf("π"); i !== -1; i = equation.indexOf("π",i + 1)){
+        for(const j of "0123456789"){
+            if(equation[i - 1] == j){
+                looking.push(i);
+                break;
+            }
+        }
+    }
+    for(const i of looking){
+        first = equation.slice(0,i);
+        end = equation.slice(i);
+        equation = first + "*" + end;
+    }
     while(equation.includes("--")){
         equation = equation.replaceAll("--","+");
     }
