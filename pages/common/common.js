@@ -46,7 +46,6 @@ function solve(){
         for(const j of "0123456789"){
             if(equation[i - 1] == j){
                 parenthesis.push(i);
-                console.log(i);
                 break;
             }
         }
@@ -61,7 +60,6 @@ function solve(){
         for(const j of "0123456789"){
             if(equation[i + 1] == j){
                 parenthesis.push(i);
-                console.log(i);
                 break;
             }
         }
