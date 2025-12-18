@@ -42,12 +42,10 @@ function solve(){
     const answer = document.getElementById("answer");
     equation = equation.replaceAll("÷","/");
     parenthesis = [];
-    for(let i = equation.indexOf("("); i < equation.length && i !== -1;){
+    for(let i = equation.indexOf("("); i < equation.length && i !== -1; i = equation.indexOf("(",i + 1)){
         for(const j of "0123456789"){
             if(equation[i - 1] == j){
-                console.log("Test")
                 parenthesis.push(i);
-                i = equation.indexOf("(",i + 1);
                 console.log(i);
                 break;
             }
