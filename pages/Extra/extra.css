@@ -1,6 +1,7 @@
 div#output_screen{
     min-height: 30vh;
     min-width: 62.4vh;
+    max-width: 62.4vh;
 }
 
 a.links:link{
@@ -21,4 +22,8 @@ h2.longer{
 
 h2.longest{
     font-size: 1.8ch;
+}
+
+div.key{
+    width: 5.8vh;
 }

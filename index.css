@@ -19,3 +19,7 @@ a#extra:link{
 a#extra:visited{
     color: lime;
 }
+
+div.key{
+    width: 5.8vh;
+}
