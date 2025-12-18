@@ -1,3 +1,7 @@
 div#calc{
     width: 49vh;
 }
+
+div#output_screen{
+    height: 30vh;
+}
