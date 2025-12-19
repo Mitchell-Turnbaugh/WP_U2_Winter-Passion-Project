@@ -72,7 +72,6 @@ function solve(){
     let equation = document.getElementById("equation").textContent;
     const answer = document.getElementById("answer");
     equation = equation.replaceAll("÷","/");
-    let parenthesis = [];
     for(let i = equation.indexOf("("); i !== -1; i = equation.indexOf("(",i + 1)){
         for(const j of "0123456789"){
             if(equation[i - 1] == j){
@@ -83,12 +82,6 @@ function solve(){
             }
         }
     }
-    /*for(const i of parenthesis){
-        first = equation.slice(0,i);
-        end = equation.slice(i);
-        equation = first + "*" + end;
-    }*/
-    parenthesis = [];
     for(let i = equation.indexOf(")"); i !== -1; i = equation.indexOf(")",i + 1)){
         for(const j of "0123456789"){
             if(equation[i + 1] == j){
@@ -99,11 +92,6 @@ function solve(){
             }
         }
     }
-    /*for(const i of parenthesis){
-        first = equation.slice(0,i+1);
-        end = equation.slice(i+1);
-        equation = first + "*" + end;
-    }*/
     for(i of "πeɸ∞"){
         equation = addMultiply(equation,i);
     }
