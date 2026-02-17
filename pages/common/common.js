@@ -72,33 +72,25 @@ function solve(){
     let equation = document.getElementById("equation").textContent;
     const answer = document.getElementById("answer");
     equation = equation.replaceAll("÷","/");
-    let parenthesis = [];
     for(let i = equation.indexOf("("); i !== -1; i = equation.indexOf("(",i + 1)){
         for(const j of "0123456789"){
             if(equation[i - 1] == j){
-                parenthesis.push(i);
+                first = equation.slice(0,i);
+                end = equation.slice(i);
+                equation = first + "*" + end;
                 break;
             }
         }
     }
-    for(const i of parenthesis){
-        first = equation.slice(0,i);
-        end = equation.slice(i);
-        equation = first + "*" + end;
-    }
-    parenthesis = [];
     for(let i = equation.indexOf(")"); i !== -1; i = equation.indexOf(")",i + 1)){
         for(const j of "0123456789"){
             if(equation[i + 1] == j){
-                parenthesis.push(i);
+                first = equation.slice(0,i+1);
+                end = equation.slice(i+1);
+                equation = first + "*" + end;
                 break;
             }
         }
-    }
-    for(const i of parenthesis){
-        first = equation.slice(0,i+1);
-        end = equation.slice(i+1);
-        equation = first + "*" + end;
     }
     for(i of "πeɸ∞"){
         equation = addMultiply(equation,i);
@@ -115,11 +107,14 @@ function solve(){
     equation = equation.replaceAll("^","**");
     equation = equation.replaceAll("∞","Infinity");
     equation = equation.replaceAll("√","Math.sqrt");
-    console.log(equation)
+    equation = equation.replaceAll("cos","Math.cos");
+    equation = equation.replaceAll("sin","Math.sin");
+    equation = equation.replaceAll("tan","Math.tan");
+    console.log(equation);
     try{
         answer.textContent = String(eval(equation)).replaceAll("Infinity","∞").replaceAll("NaN","Math Error");
         sessionStorage.setItem("answer",answer.textContent);
-        console.log(equation)
+        console.log(equation);
     }catch{
         answer.textContent = "Math Error";
     }
